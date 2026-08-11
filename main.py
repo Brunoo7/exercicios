@@ -29,7 +29,7 @@ elif x > 0 and y < 0:
 else:
     print("o ponto está localizado no eixo ou origem")
 
-nuns = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+nuns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 nomes = ["Ana", "Bruno", "Carlos", "Daniel"]
 anos = ["2007", "2026"]
 
