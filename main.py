@@ -1,35 +1,35 @@
-num = int(input("Insira um número inteiro: "))
+# EXERCÍCIO 1   
+'''frutas = ["maçã", "banana", "laranja", "uva", "manga"]
+for fruta in frutas:
+    print(fruta)'''
 
-if num % 2 == 0:
-    print(f"O número {num} é par.")
-else:
-    print(f"O número {num} é ímpar.")
+# EXERCÍCIO 2
+'''infos = [
+            {"nome": "ana", "idade": "30"}, 
+            {"nome": "bob", "idade": "63"}, 
+            {"nome": "carlos", "idade": "83"}, 
+            {"nome": "daniel", "idade": "23"},
+            {"nome": "eduardo", "idade": "29"}
+]
+for info in infos:
+    nome = info ["nome"]
+    idade = info ["idade"]
+    print(f"{nome} tem {idade} anos")'''
 
-idade = int(input("Insira sua idade: "))
-if 0<= idade <= 12:
-    print("Você é uma criança.")
+# EXERCÍCIO 3
 
-elif 13 <= idade <= 18:
-    print("Você é um adolescente.")
+'''infos = [
+            {"nome": "placa de vídeo", "preço": 4000, "estoque": 0}, 
+            {"nome": "processador", "preço": 1000, "estoque": 43},
+            {"nome": "gabinete", "preço": 350, "estoque": 70},
+            {"nome": "monitor", "preço": 2000, "estoque": 0},
+            {"nome": "teclado", "preço": 100, "estoque": 29}, 
+        ]
 
-else:
-    print("Você é um adulto.")
+for info in infos:
+    nome = info ["nome"]
+    estoque = info ["estoque"]
+    if estoque > 0:
+        print(f"O produto {nome} está com {estoque} número de itens no estoque")'''
 
-x = int(input("Insira a coordenada x: "))
-y = int(input("Insira a coordenada y: "))
-
-if x > 0 and y > 0:
-    print("o ponto está localizad no primeiro quadrante")
-elif x < 0 and y > 0:
-    print("o ponto está localizad no segundo quadrante")
-elif x < 0 and y < 0:
-    print("o ponto está localizad no terceiro quadrante")
-elif x > 0 and y < 0:
-    print("o ponto está localizad no quarto quadrante")
-else:
-    print("o ponto está localizado no eixo ou origem")
-
-nuns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-nomes = ["Ana", "Bruno", "Carlos", "Daniel"]
-anos = ["2007", "2026"]
-
+# EXERCÍCIO 4
