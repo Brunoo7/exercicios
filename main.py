@@ -33,3 +33,13 @@ for info in infos:
         print(f"O produto {nome} está com {estoque} número de itens no estoque")'''
 
 # EXERCÍCIO 4
+
+i = 0
+num = 10000000000000000000000000000
+while num != 0:
+    num = int(input("Digite um número: "))
+    i +=1 
+print(f"Você digitou {i} números")
+
+# EXERCÍCIO 5
+
