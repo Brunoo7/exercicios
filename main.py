@@ -34,12 +34,32 @@ for info in infos:
 
 # EXERCÍCIO 4
 
-i = 0
+'''i = 0
 num = 10000000000000000000000000000
 while num != 0:
     num = int(input("Digite um número: "))
-    i +=1 
-print(f"Você digitou {i} números")
+    if num != 0:
+        i += 1
+print(f"Você digitou {i} números")'''
 
 # EXERCÍCIO 5
 
+'''nomes = []
+novo_nome = 0
+while novo_nome != "sair":
+    novo_nome = input("Digite o nome que deseja adicionar à lista ou digite 'sair' para sair do programa: ")
+    if novo_nome != "sair":
+        nomes.append(novo_nome)
+print(nomes)'''
+
+# EXERCÍCIO 6
+
+'''frutas = ["maçã", "banana", "maçã", "laranja", "banana", "maçã", "uva"]
+qnt_frutas = {}
+
+for frut in frutas:
+    if frut not in qnt_frutas:
+        qnt_frutas[frut] = 1 # adiociona uma nova chave
+    else:
+        qnt_frutas[frut] = qnt_frutas[frut] + 1 # aumenta a quiantidade
+print(qnt_frutas)'''
