@@ -63,3 +63,44 @@ for frut in frutas:
     else:
         qnt_frutas[frut] = qnt_frutas[frut] + 1 # aumenta a quiantidade
 print(qnt_frutas)'''
+
+# EXERCÍCIO 7
+
+'''nuns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for nun in nuns:
+    if nun % 2 == 0:
+        print(nun)'''
+
+# EXERCÍCIO 8
+
+'''nuns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+soma = 0
+media = 0
+qnt = 0
+for i in nuns:
+    qnt += 1
+for nun in nuns:
+    soma = soma + nun
+    media = soma / qnt 
+print(f"Soma de todos os números: {soma}, quantidades de números: {qnt}, média dos números: {media}")'''
+
+# EXERCÍCIO 9
+
+alunos = {
+    "Ana": [8, 7, 9],
+    "Bruno": [5, 6, 4],
+    "Carlos": [10, 9, 8]
+}
+
+for aluno in alunos:
+    media = 0
+    soma = 0
+    for notas in alunos [aluno]:
+        soma = notas + soma
+    media = soma / 3
+    if media >= 7:
+        print(f"O aluno {aluno} está aprovado")
+    elif media >= 5:
+        print(f"O aluno {aluno} está de recuperação")
+    else:
+        print(f"O aluno {aluno} está reprovado")
