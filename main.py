@@ -61,7 +61,7 @@ for frut in frutas:
     if frut not in qnt_frutas:
         qnt_frutas[frut] = 1 # adiociona uma nova chave
     else:
-        qnt_frutas[frut] = qnt_frutas[frut] + 1 # aumenta a quiantidade
+        qnt_frutas[frut] = qnt_frutas[frut] + 1 # aumenta a quantidade
 print(qnt_frutas)'''
 
 # EXERCÍCIO 7
@@ -86,7 +86,7 @@ print(f"Soma de todos os números: {soma}, quantidades de números: {qnt}, médi
 
 # EXERCÍCIO 9
 
-alunos = {
+'''alunos = {
     "Ana": [8, 7, 9],
     "Bruno": [5, 6, 4],
     "Carlos": [10, 9, 8]
@@ -104,3 +104,85 @@ for aluno in alunos:
         print(f"O aluno {aluno} está de recuperação")
     else:
         print(f"O aluno {aluno} está reprovado")
+'''
+'''# EXERCÍCIO 10
+
+produto = {
+    "nome": "Notebook",
+    "preco": 3500,
+    "estoque": 10
+}
+nome  = produto["nome"]
+preco = produto["preco"]
+estoque = produto["estoque"]
+print(f"O produto {nome} está custando R${preco} e ainda tem {estoque} unidades disponíveis")'''
+
+'''# EXERCÍCIO 11
+nuns = []
+
+def menu():
+    opcao = 0
+    while opcao != 4:
+        print("1 - Adicionar número ")
+        print("2 - Listar números")
+        print("3 - Mostrar maior número")
+        print("4 - Sair")
+        opcao = int(input("Escolha um opção: "))
+        match opcao:
+            case 1:
+                num_add = int(input("Digite o número que deseja adicionar à lista: "))
+                nuns.append(num_add)
+            case 2:
+                print(nuns)
+            case 3:
+                if len(nuns) > 0:
+                    maior_num = nuns[0]
+                    for num in nuns:
+                        if num > maior_num:
+                            maior_num = num
+                    print(maior_num)
+                else:
+                    print("A lista está vazia")
+    print("Saindo")
+menu()'''
+
+# EXERCÍCIO 12
+
+'''produtos_loja = []
+
+def menu ():
+    opcao = 0
+    while opcao != 4:
+        print("1 - Cadastrar produto")
+        print("2 - Listar produtos")
+        print("3 - Mostrar valor total do estoque")
+        print("4 - Sair")
+        opcao = int(input("Escolha uma opção: "))
+        match opcao:
+            case 1:
+                print("Cadastrar produto")
+                nome = input("Digite o nome do produto: ")
+                preco = int(input("Digite o preço do produto: "))
+                estoque = int(input("Digite a quantidade em estoque do produto: "))
+                novo_produto = {"nome": nome, "preço": preco, "quantidade": estoque}
+                produtos_loja.append(novo_produto)
+                print(f"O produto {nome} foi cadastrado com sucesso!")
+            case 2:
+                print("Produtos:")
+                for produto in produtos_loja:
+                    nome = produto ["nome"]
+                    preco = produto ["preço"]
+                    estoque = produto ["quantidade"]
+                    print(f"Nome: {nome}, Preço: {preco}, Quantidade: {estoque}")
+            case 3:
+                print("Valor total do estoque")
+                valor_total = 0
+                for produto in produtos_loja:
+                    preco = produto ["preço"]
+                    estoque = produto ["quantidade"]
+                    valor_total = valor_total + (preco * estoque)
+                print(f"O valor total do estoque é: {valor_total}")
+
+    print("Saindo...")
+menu()'''
+
