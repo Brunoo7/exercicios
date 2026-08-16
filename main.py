@@ -186,3 +186,40 @@ def menu ():
     print("Saindo...")
 menu()'''
 
+# EXERCÍCIO 13
+
+'''for i in range(1, 20):
+    if i % 3 == 0:
+        print(i)'''
+
+# EXERCÍCIO 14
+
+'''numeros = [12, 5, 8, 21, 30, 7, 14, 3, 18]
+maiores = []
+
+for num in numeros:
+    if num > 10:
+        maiores.append(num)
+print(maiores)'''
+
+# EXERCÍCIO 15
+
+'''vendas = [
+    {"produto": "Mouse", "preco": 50, "quantidade": 2},
+    {"produto": "Teclado", "preco": 100, "quantidade": 1},
+    {"produto": "Mouse", "preco": 50, "quantidade": 3},
+    {"produto": "Monitor", "preco": 800, "quantidade": 1}
+]
+
+faturamento_total = {}
+
+for produto in vendas:
+    nome = produto["produto"]
+    preco = produto["preco"]
+    quantidade = produto["quantidade"]
+    faturamento = preco * quantidade
+    if nome not in faturamento_total:
+        faturamento_total[nome] = faturamento
+    else:
+        faturamento_total[nome] = faturamento_total[nome] + faturamento
+print(f"{faturamento_total}")'''
