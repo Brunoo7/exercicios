@@ -28,3 +28,17 @@
 # c1.exibir_infos()
 # c2.exibir_infos()
 # c3.exibir_infos()
+
+# EXERCÍCIO 3
+class Produto:
+    def __init__(self, nome, preco, estoque):
+        self.nome = nome
+        self.preco = preco
+        self.estoque = estoque
+    def exibir_infos(self):
+        print(f"Produto: {self.nome}, Preço: {self.preco}, estoque: {self.estoque}")
+
+p1 = Produto("Teclado", 150, 50)
+
+p1.exibir_infos()
+        
