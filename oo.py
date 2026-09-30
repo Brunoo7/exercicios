@@ -43,40 +43,42 @@
 # p1.exibir_infos()
 
 # EXERCÍCIO 4
-class Produto:
-    def __init__(self, nome, preco, estoque):
-        self.nome = nome
-        self.preco = preco
-        self.estoque = estoque
+# class Produto:
+#     def __init__(self, nome, preco, estoque):
+#         self.nome = nome
+#         self.preco = preco
+#         self.estoque = estoque
 
-    def exibir_infos(self):
-        print(f"Produto: {self.nome}, Preço: {self.preco}, estoque: {self.estoque}")
+#     def exibir_infos(self):
+#         print(f"Produto: {self.nome}, Preço: {self.preco}, estoque: {self.estoque}")
 
-    def atualizar_produto(self):
-        novo_preco = float(input("Digite o valor do novo preço: "))
-        self.preco = novo_preco
-        novo_estoque = int(input("Digite o valor do novo estoque: "))
-        self.estoque = novo_estoque
+#     def atualizar_produto(self):
+#         novo_preco = float(input("Digite o valor do novo preço: "))
+#         self.preco = novo_preco
+#         novo_estoque = int(input("Digite o valor do novo estoque: "))
+#         self.estoque = novo_estoque
 
-produtos = Produto("Teclado", 150, 50)
+# produtos = Produto("Teclado", 150, 50)
 
-def menu():
-    opcao = 0
-    while opcao != 3:
-        print("1- Mostrar produtos")
-        print("2- Atualizar produtos")
-        print("3- Sair")
+# def menu():
+#     opcao = 0
+#     while opcao != 3:
+#         print("1- Mostrar produtos")
+#         print("2- Atualizar produtos")
+#         print("3- Sair")
 
-        opcao = int(input("Escolha uma opção: "))
+#         opcao = int(input("Escolha uma opção: "))
 
-        match opcao:
-            case 1:
-                produtos.exibir_infos() 
+#         match opcao:
+#             case 1:
+#                 produtos.exibir_infos() 
 
-            case 2:
-                produtos.atualizar_produto()
+#             case 2:
+#                 produtos.atualizar_produto()
 
-            case 3:
-                print("Saindo...")
+#             case 3:
+#                 print("Saindo...")
 
-menu()
+# menu()
+
+# EXERCÍCIO  5
