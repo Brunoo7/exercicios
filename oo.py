@@ -96,20 +96,48 @@
 # p2.apresentar()
 
 # EXERCÍCIO 6
-class Pessoa:
-    def __init__(self, nome, idade):
-        self.nome = nome
-        self.idade = idade
+# class Pessoa:
+#     def __init__(self, nome, idade):
+#         self.nome = nome
+#         self.idade = idade
 
-    def fazer_aniversario(self):
-        self.idade += 1
+#     def fazer_aniversario(self):
+#         self.idade += 1
 
-p1 = Pessoa("Bruno", 18)
-p2 = Pessoa("Ana", 30)
+# p1 = Pessoa("Bruno", 18)
+# p2 = Pessoa("Ana", 30)
 
-p1.fazer_aniversario()
-p2.fazer_aniversario()
-p2.fazer_aniversario()
+# p1.fazer_aniversario()
+# p2.fazer_aniversario()
+# p2.fazer_aniversario()
 
-print(p1.idade)
-print(p2.idade)
+# print(p1.idade)
+# print(p2.idade)
+
+# EXERCÍCIO 7
+class ContaBancaria:
+    def __init__(self, titular, saldo):
+        self.saldo = saldo
+        self.titular = titular
+
+    def depositar(self, valor):
+        self.saldo += valor
+
+    def sacar(self, valor):
+        if valor > self.saldo:
+            print("Valor inválido")
+        else:
+            self.saldo -= valor
+
+    def mostrar_saldo(self):
+        print(f"O saldo da conta do titular {self.titular} é de R${self.saldo}")
+
+conta = ContaBancaria("Bruno", 100)
+
+valor = float(input("Digite o valor que quer depositar: "))
+conta.depositar(valor)
+
+valor = float(input("Digite o valor que quer sacar: "))
+conta.sacar(valor)
+
+conta.mostrar_saldo()
