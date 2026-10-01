@@ -115,29 +115,31 @@
 # print(p2.idade)
 
 # EXERCÍCIO 7
-class ContaBancaria:
-    def __init__(self, titular, saldo):
-        self.saldo = saldo
-        self.titular = titular
+# class ContaBancaria:
+#     def __init__(self, titular, saldo):
+#         self.saldo = saldo
+#         self.titular = titular
 
-    def depositar(self, valor):
-        self.saldo += valor
+#     def depositar(self, valor):
+#         self.saldo += valor
 
-    def sacar(self, valor):
-        if valor > self.saldo:
-            print("Valor inválido")
-        else:
-            self.saldo -= valor
+#     def sacar(self, valor):
+#         if valor > self.saldo:
+#             print("Valor inválido")
+#         else:
+#             self.saldo -= valor
 
-    def mostrar_saldo(self):
-        print(f"O saldo da conta do titular {self.titular} é de R${self.saldo}")
+#     def mostrar_saldo(self):
+#         print(f"O saldo da conta do titular {self.titular} é de R${self.saldo}")
 
-conta = ContaBancaria("Bruno", 100)
+# conta = ContaBancaria("Bruno", 100)
 
-valor = float(input("Digite o valor que quer depositar: "))
-conta.depositar(valor)
+# valor = float(input("Digite o valor que quer depositar: "))
+# conta.depositar(valor)
 
-valor = float(input("Digite o valor que quer sacar: "))
-conta.sacar(valor)
+# valor = float(input("Digite o valor que quer sacar: "))
+# conta.sacar(valor)
 
-conta.mostrar_saldo()
+# conta.mostrar_saldo()
+
+# EXERCÍCIO 8
