@@ -94,3 +94,22 @@
 
 # p1.apresentar()
 # p2.apresentar()
+
+# EXERCÍCIO 6
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def fazer_aniversario(self):
+        self.idade += 1
+
+p1 = Pessoa("Bruno", 18)
+p2 = Pessoa("Ana", 30)
+
+p1.fazer_aniversario()
+p2.fazer_aniversario()
+p2.fazer_aniversario()
+
+print(p1.idade)
+print(p2.idade)
