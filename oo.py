@@ -143,3 +143,29 @@
 # conta.mostrar_saldo()
 
 # EXERCÍCIO 8
+class Calculadora:
+    
+    def somar (self, a, b):
+        return a + b
+
+    def subtrair (self, a, b):
+        return a - b
+
+    def multiplicar (self, a, b):
+        return a * b
+
+    def dividir (self, a, b):
+        if a == 0 or b == 0:
+            print("Valor inválido, impossível dividir por 0")
+        else:
+            return a / b
+
+a = float(input("Digite o primeiro valor: "))
+b = float(input("Digite o segundo valor: "))
+
+calc = Calculadora()
+
+print(f"O valor da soma é: {calc.somar(a,b)}")
+print(f"O valor da subtração é: {calc.subtrair(a,b)}")
+print(f"O valor da multiplicação é: {calc.multiplicar(a,b)}")
+print(f"O valor da divisão é: {calc.dividir(a,b)}")
