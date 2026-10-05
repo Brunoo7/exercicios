@@ -171,37 +171,39 @@
 # print(f"O valor da divisão é: {calc.dividir(a,b)}")
 
 # EXERCÍCO 9
-class Cliente:
-    def __init__(self, nome, idade):
-        self.nome = nome
-        self.idade = idade
+# class Cliente:
+#     def __init__(self, nome, idade):
+#         self.nome = nome
+#         self.idade = idade
 
-cliente = Cliente("Bruno", 19)
+# cliente = Cliente("Bruno", 19)
 
 
-class Conta:
-    def __init__(self, titular, saldo):
-        self.titular = titular
-        self.saldo = saldo
+# class Conta:
+#     def __init__(self, titular, saldo):
+#         self.titular = titular
+#         self.saldo = saldo
 
-    def deposito(self, valor):
-        self.saldo += valor
+#     def deposito(self, valor):
+#         self.saldo += valor
 
-    def saque(self, valor):
-        if valor > self.saldo:
-            print("Saldo insuficiente")
-        else:
-            self.saldo -= valor
+#     def saque(self, valor):
+#         if valor > self.saldo:
+#             print("Saldo insuficiente")
+#         else:
+#             self.saldo -= valor
 
-    def consultar_saldo(self):
-        print(f"O saldo do titular {self.titular.nome} é de {self.saldo}")
+#     def consultar_saldo(self):
+#         print(f"O saldo do titular {self.titular.nome} é de {self.saldo}")
 
-conta = Conta(cliente, 100)
+# conta = Conta(cliente, 100)
 
-valor = float(input("Digite o valor que quer depositar: "))
-conta.deposito(valor)
+# valor = float(input("Digite o valor que quer depositar: "))
+# conta.deposito(valor)
 
-valor = float(input("Digite o valor que quer sacar: "))
-conta.saque(valor)
+# valor = float(input("Digite o valor que quer sacar: "))
+# conta.saque(valor)
 
-conta.consultar_saldo()
+# conta.consultar_saldo()
+
+# EXERCÍCO 10
