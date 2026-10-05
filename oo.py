@@ -143,29 +143,65 @@
 # conta.mostrar_saldo()
 
 # EXERCÍCIO 8
-class Calculadora:
+# class Calculadora:
     
-    def somar (self, a, b):
-        return a + b
+#     def somar (self, a, b):
+#         return a + b
 
-    def subtrair (self, a, b):
-        return a - b
+#     def subtrair (self, a, b):
+#         return a - b
 
-    def multiplicar (self, a, b):
-        return a * b
+#     def multiplicar (self, a, b):
+#         return a * b
 
-    def dividir (self, a, b):
-        if a == 0 or b == 0:
-            print("Valor inválido, impossível dividir por 0")
+#     def dividir (self, a, b):
+#         if a == 0 or b == 0:
+#             print("Valor inválido, impossível dividir por 0")
+#         else:
+#             return a / b
+
+# a = float(input("Digite o primeiro valor: "))
+# b = float(input("Digite o segundo valor: "))
+
+# calc = Calculadora()
+
+# print(f"O valor da soma é: {calc.somar(a,b)}")
+# print(f"O valor da subtração é: {calc.subtrair(a,b)}")
+# print(f"O valor da multiplicação é: {calc.multiplicar(a,b)}")
+# print(f"O valor da divisão é: {calc.dividir(a,b)}")
+
+# EXERCÍCO 9
+class Cliente:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+cliente = Cliente("Bruno", 19)
+
+
+class Conta:
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo = saldo
+
+    def deposito(self, valor):
+        self.saldo += valor
+
+    def saque(self, valor):
+        if valor > self.saldo:
+            print("Saldo insuficiente")
         else:
-            return a / b
+            self.saldo -= valor
 
-a = float(input("Digite o primeiro valor: "))
-b = float(input("Digite o segundo valor: "))
+    def consultar_saldo(self):
+        print(f"O saldo do titular {self.titular.nome} é de {self.saldo}")
 
-calc = Calculadora()
+conta = Conta(cliente, 100)
 
-print(f"O valor da soma é: {calc.somar(a,b)}")
-print(f"O valor da subtração é: {calc.subtrair(a,b)}")
-print(f"O valor da multiplicação é: {calc.multiplicar(a,b)}")
-print(f"O valor da divisão é: {calc.dividir(a,b)}")
+valor = float(input("Digite o valor que quer depositar: "))
+conta.deposito(valor)
+
+valor = float(input("Digite o valor que quer sacar: "))
+conta.saque(valor)
+
+conta.consultar_saldo()
