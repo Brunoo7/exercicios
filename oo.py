@@ -207,3 +207,27 @@
 # conta.consultar_saldo()
 
 # EXERCÍCO 10
+class Produto:
+    def __init__(self, nome, preco):
+        self.nome = nome
+        self.preco = preco
+
+produto_01 = Produto("Teclado", 150)
+produto_02 = Produto("Monitor", 350)
+produto_03 = Produto("Placa de vídeo", 150)
+
+class Carrinho:
+    def __init__(self):
+        self.produtos = []
+
+    def adicionar_produto(self):
+        self.produtos.append(produto_01)
+        self.produtos.append(produto_02)
+        self.produtos.append(produto_03)
+
+    def mostrar_produtos(self):
+        print("====PRODUTOS====")
+        for i in self.produtos:
+            print(f"Nome: {self.nome} - Preco: {self.preco}")
+
+mostrar_produtos()
