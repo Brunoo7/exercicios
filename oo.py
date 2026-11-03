@@ -212,22 +212,40 @@ class Produto:
         self.nome = nome
         self.preco = preco
 
-produto_01 = Produto("Teclado", 150)
-produto_02 = Produto("Monitor", 350)
-produto_03 = Produto("Placa de vídeo", 150)
-
 class Carrinho:
     def __init__(self):
         self.produtos = []
 
-    def adicionar_produto(self):
-        self.produtos.append(produto_01)
-        self.produtos.append(produto_02)
-        self.produtos.append(produto_03)
+    def adicionar_produto(self, produto):
+        self.produtos.append(produto)
+
+    def remover_produto(self, produto):
+        self.produtos.remove(produto)
 
     def mostrar_produtos(self):
         print("====PRODUTOS====")
         for i in self.produtos:
-            print(f"Nome: {self.nome} - Preco: {self.preco}")
+            print(f"Nome: {i.nome.ljust(20)} | Preco: {i.preco}")
 
-mostrar_produtos()
+    def calcular_total(self):
+        total = 0
+        for produto in self.produtos:
+            total += produto.preco
+        print(f"\nO valor total do seu carrinho é: R${total}")
+
+
+produto_01 = Produto("Teclado", 150)
+produto_02 = Produto("Monitor", 350)
+produto_03 = Produto("Placa de vídeo", 150)
+
+carrinho = Carrinho()
+
+carrinho.adicionar_produto(produto_01)
+carrinho.adicionar_produto(produto_02)
+carrinho.adicionar_produto(produto_03)
+
+carrinho.remover_produto(produto_02)
+
+carrinho.mostrar_produtos()
+
+carrinho.calcular_total()
