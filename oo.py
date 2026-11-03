@@ -315,30 +315,30 @@
 
 # biblioteca.devolver_livro()
 # EXERCÍCIO 12
-class Aluno:
-    def __init__(self, nome, idade, notas):
-        self.nome = nome
-        self.idade = idade
-        self.notas = notas
+# class Aluno:
+#     def __init__(self, nome, idade, notas):
+#         self.nome = nome
+#         self.idade = idade
+#         self.notas = notas
 
-    def adicionar_nota(self, notas):
-        self.notas.append(notas)
+#     def adicionar_nota(self, notas):
+#         self.notas.append(notas)
 
-    def calcular_media(self):
-        media = sum(self.notas) / len(self.notas)
-        return media
+#     def calcular_media(self):
+#         media = sum(self.notas) / len(self.notas)
+#         return media
 
-    def mostrar_situacao(self):
-        media = self.calcular_media()
-        if media < 7:
-            print(f"O aluno {self.nome} está reprovado com média {media:.2f}")
-        else:
-            print(f"O aluno {self.nome} está aprovado com média {media:.2f}")
+#     def mostrar_situacao(self):
+#         media = self.calcular_media()
+#         if media < 7:
+#             print(f"O aluno {self.nome} está reprovado com média {media:.2f}")
+#         else:
+#             print(f"O aluno {self.nome} está aprovado com média {media:.2f}")
 
-aluno_01 = Aluno("Ana", 15, [8, 9, 6])
-aluno_02 = Aluno("Bruno", 14, [7, 6, 7])
-aluno_03 = Aluno("Carlos", 16, [9, 7, 9])
+# aluno_01 = Aluno("Ana", 15, [8, 9, 6])
+# aluno_02 = Aluno("Bruno", 14, [7, 6, 7])
+# aluno_03 = Aluno("Carlos", 16, [9, 7, 9])
 
-aluno_01.mostrar_situacao()
-aluno_02.mostrar_situacao()
-aluno_03.mostrar_situacao()
+# aluno_01.mostrar_situacao()
+# aluno_02.mostrar_situacao()
+# aluno_03.mostrar_situacao()
