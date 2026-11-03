@@ -207,45 +207,110 @@
 # conta.consultar_saldo()
 
 # EXERCÍCO 10
-class Produto:
-    def __init__(self, nome, preco):
-        self.nome = nome
-        self.preco = preco
+# class Produto:
+#     def __init__(self, nome, preco):
+#         self.nome = nome
+#         self.preco = preco
 
-class Carrinho:
+# class Carrinho:
+#     def __init__(self):
+#         self.produtos = []
+
+#     def adicionar_produto(self, produto):
+#         self.produtos.append(produto)
+
+#     def remover_produto(self, produto):
+#         self.produtos.remove(produto)
+
+#     def mostrar_produtos(self):
+#         print("====PRODUTOS====")
+#         for i in self.produtos:
+#             print(f"Nome: {i.nome.ljust(20)} | Preco: {i.preco}")
+
+#     def calcular_total(self):
+#         total = 0
+#         for produto in self.produtos:
+#             total += produto.preco
+#         print(f"\nO valor total do seu carrinho é: R${total}")
+
+
+# produto_01 = Produto("Teclado", 150)
+# produto_02 = Produto("Monitor", 350)
+# produto_03 = Produto("Placa de vídeo", 150)
+
+# carrinho = Carrinho()
+
+# carrinho.adicionar_produto(produto_01)
+# carrinho.adicionar_produto(produto_02)
+# carrinho.adicionar_produto(produto_03)
+
+# carrinho.remover_produto(produto_02)
+
+# carrinho.mostrar_produtos()
+
+# carrinho.calcular_total()
+# EXERCÍCIO 11
+class Livro:
+    def __init__(self, titulo, autor, disponivel):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponivel = disponivel
+
+class Biblioteca:
     def __init__(self):
-        self.produtos = []
+        self.livros = []
 
-    def adicionar_produto(self, produto):
-        self.produtos.append(produto)
+    def adicionar_livro(self, livro):
+        self.livros.append(livro)
 
-    def remover_produto(self, produto):
-        self.produtos.remove(produto)
+    def listar_livros(self):
+        print("====LIVROS====")
+        for i in self.livros:
+            print(f"Título: {i.titulo.ljust(20)} | Autor: {i.autor.ljust(20)} | Disponível: {i.disponivel}")
 
-    def mostrar_produtos(self):
-        print("====PRODUTOS====")
-        for i in self.produtos:
-            print(f"Nome: {i.nome.ljust(20)} | Preco: {i.preco}")
+    def emprestar_livro(self):
+        livro_desejado = input("\nQual livro deseja pegar emprestado? ")
+        encontrado = False
+        for i in self.livros:
+            if livro_desejado in i.titulo:
+                encontrado = True
 
-    def calcular_total(self):
-        total = 0
-        for produto in self.produtos:
-            total += produto.preco
-        print(f"\nO valor total do seu carrinho é: R${total}")
+                if i.disponivel == False:
+                    print("Livro não disponível")
+                else:
+                    i.disponivel = False
+                    print("Livro emprestado!")
+        if encontrado == False:
+            print("Livro não encontrado")
 
+    def devolver_livro(self):
+        devolucao = input("\nQual livro deseja devolver? ")
+        encontrado = False
+        for i in self.livros:
+            if devolucao in i.titulo:
+                encontrado = True
 
-produto_01 = Produto("Teclado", 150)
-produto_02 = Produto("Monitor", 350)
-produto_03 = Produto("Placa de vídeo", 150)
+                if i.disponivel == True:
+                    print("Livro já devolvido")
+                else:
+                    i.disponivel = True
+                    print("Livro devolvido!")
 
-carrinho = Carrinho()
+        if encontrado == False:          
+            print("Livro não encontrado")
 
-carrinho.adicionar_produto(produto_01)
-carrinho.adicionar_produto(produto_02)
-carrinho.adicionar_produto(produto_03)
+livro_01 = Livro("Dom Casmurro", "Machado de Assis", True)
+livro_02 = Livro("O Hobbit", "J. R. R. Tolkien", False)
+livro_03 = Livro("1984", "George Orwell", True)
 
-carrinho.remover_produto(produto_02)
+biblioteca = Biblioteca()
 
-carrinho.mostrar_produtos()
+biblioteca.adicionar_livro(livro_01)
+biblioteca.adicionar_livro(livro_02)
+biblioteca.adicionar_livro(livro_03)
 
-carrinho.calcular_total()
+biblioteca.listar_livros()
+
+biblioteca.emprestar_livro()
+
+biblioteca.devolver_livro()
