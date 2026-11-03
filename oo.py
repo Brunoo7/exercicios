@@ -250,67 +250,95 @@
 
 # carrinho.calcular_total()
 # EXERCÍCIO 11
-class Livro:
-    def __init__(self, titulo, autor, disponivel):
-        self.titulo = titulo
-        self.autor = autor
-        self.disponivel = disponivel
+# class Livro:
+#     def __init__(self, titulo, autor, disponivel):
+#         self.titulo = titulo
+#         self.autor = autor
+#         self.disponivel = disponivel
 
-class Biblioteca:
-    def __init__(self):
-        self.livros = []
+# class Biblioteca:
+#     def __init__(self):
+#         self.livros = []
 
-    def adicionar_livro(self, livro):
-        self.livros.append(livro)
+#     def adicionar_livro(self, livro):
+#         self.livros.append(livro)
 
-    def listar_livros(self):
-        print("====LIVROS====")
-        for i in self.livros:
-            print(f"Título: {i.titulo.ljust(20)} | Autor: {i.autor.ljust(20)} | Disponível: {i.disponivel}")
+#     def listar_livros(self):
+#         print("====LIVROS====")
+#         for i in self.livros:
+#             print(f"Título: {i.titulo.ljust(20)} | Autor: {i.autor.ljust(20)} | Disponível: {i.disponivel}")
 
-    def emprestar_livro(self):
-        livro_desejado = input("\nQual livro deseja pegar emprestado? ")
-        encontrado = False
-        for i in self.livros:
-            if livro_desejado in i.titulo:
-                encontrado = True
+#     def emprestar_livro(self):
+#         livro_desejado = input("\nQual livro deseja pegar emprestado? ")
+#         encontrado = False
+#         for i in self.livros:
+#             if livro_desejado in i.titulo:
+#                 encontrado = True
 
-                if i.disponivel == False:
-                    print("Livro não disponível")
-                else:
-                    i.disponivel = False
-                    print("Livro emprestado!")
-        if encontrado == False:
-            print("Livro não encontrado")
+#                 if i.disponivel == False:
+#                     print("Livro não disponível")
+#                 else:
+#                     i.disponivel = False
+#                     print("Livro emprestado!")
+#         if encontrado == False:
+#             print("Livro não encontrado")
 
-    def devolver_livro(self):
-        devolucao = input("\nQual livro deseja devolver? ")
-        encontrado = False
-        for i in self.livros:
-            if devolucao in i.titulo:
-                encontrado = True
+#     def devolver_livro(self):
+#         devolucao = input("\nQual livro deseja devolver? ")
+#         encontrado = False
+#         for i in self.livros:
+#             if devolucao in i.titulo:
+#                 encontrado = True
 
-                if i.disponivel == True:
-                    print("Livro já devolvido")
-                else:
-                    i.disponivel = True
-                    print("Livro devolvido!")
+#                 if i.disponivel == True:
+#                     print("Livro já devolvido")
+#                 else:
+#                     i.disponivel = True
+#                     print("Livro devolvido!")
 
-        if encontrado == False:          
-            print("Livro não encontrado")
+#         if encontrado == False:          
+#             print("Livro não encontrado")
 
-livro_01 = Livro("Dom Casmurro", "Machado de Assis", True)
-livro_02 = Livro("O Hobbit", "J. R. R. Tolkien", False)
-livro_03 = Livro("1984", "George Orwell", True)
+# livro_01 = Livro("Dom Casmurro", "Machado de Assis", True)
+# livro_02 = Livro("O Hobbit", "J. R. R. Tolkien", False)
+# livro_03 = Livro("1984", "George Orwell", True)
 
-biblioteca = Biblioteca()
+# biblioteca = Biblioteca()
 
-biblioteca.adicionar_livro(livro_01)
-biblioteca.adicionar_livro(livro_02)
-biblioteca.adicionar_livro(livro_03)
+# biblioteca.adicionar_livro(livro_01)
+# biblioteca.adicionar_livro(livro_02)
+# biblioteca.adicionar_livro(livro_03)
 
-biblioteca.listar_livros()
+# biblioteca.listar_livros()
 
-biblioteca.emprestar_livro()
+# biblioteca.emprestar_livro()
 
-biblioteca.devolver_livro()
+# biblioteca.devolver_livro()
+# EXERCÍCIO 12
+class Aluno:
+    def __init__(self, nome, idade, notas):
+        self.nome = nome
+        self.idade = idade
+        self.notas = notas
+
+    def adicionar_nota(self, notas):
+        self.notas.append(notas)
+
+    def calcular_media(self):
+        media = sum(self.notas) / len(self.notas)
+        return media
+
+    def mostrar_situacao(self):
+        media = self.calcular_media()
+        if media < 7:
+            print(f"O aluno {self.nome} está reprovado com média {media:.2f}")
+        else:
+            print(f"O aluno {self.nome} está aprovado com média {media:.2f}")
+
+aluno_01 = Aluno("Ana", 15, [8, 9, 6])
+aluno_02 = Aluno("Bruno", 14, [7, 6, 7])
+aluno_03 = Aluno("Carlos", 16, [9, 7, 9])
+
+aluno_01.mostrar_situacao()
+aluno_02.mostrar_situacao()
+aluno_03.mostrar_situacao()
